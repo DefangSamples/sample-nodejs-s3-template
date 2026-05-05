@@ -39,7 +39,7 @@ jobs:
 
       - name: Defang ${{ github.event.inputs.action || 'up' }} ${{
           github.event.inputs.stack || 'default stack' }}
-        uses: DefangLabs/defang-github-action@v1.4.0
+        uses: DefangLabs/defang-github-action@v2
         with:
           command: ${{ github.event.inputs.action || 'up' }}
           stack: ${{ github.event.inputs.stack || '' }}
@@ -49,7 +49,7 @@ jobs:
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
 
       - name: Deployment Summary
-        uses: DefangLabs/defang-github-action@v1.4.0
+        uses: DefangLabs/defang-github-action@v2
         with:
           command: services
           stack: ${{ github.event.inputs.stack || '' }}
